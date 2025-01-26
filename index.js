@@ -11,6 +11,12 @@ app.get('/',(req,res)=>{
     });
 })
 
+app.get('/health',(req,res)=>{
+    return res.json({
+        message: "I am healthy",
+    });
+})
+
 app.listen(PORT,()=>{
     console.log(`Server is listening on the port ${PORT}`)
 })
